@@ -1,0 +1,36 @@
+<body img src="/assets/images/color.jpg">
+  <form role="form" #loginForm="ngForm" (ngSubmit)="Login(loginForm)">
+  <div class="container px-4 py-5 mx-auto">
+  <div class="card card0">
+      <div class="d-flex flex-lg-row flex-column-reverse">
+          <div class="card card1">
+              <div class="row justify-content-center my-auto">
+                  <div class="col-md-8 col-10 my-5">
+                      <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="/assets/images/calsoft.jpg"> </div>
+                      <h3 class="mb-5 text-center heading">We are Calsoft</h3>
+                      <h4 class="msg-info">Please login to your account</h4>
+                      <div class="form-group">
+                        <h3 class="form-control-label text-muted">Username</h3>
+                        <input ngModel type="email" class="form-control" required id="Username" placeholder="Enter Email" name="Username" #Username="ngModel" #spy>
+                        <!-- <input type="email" id="email" name="email" placeholder="Email id" class="form-control" required>-->
+                       </div>
+                      <div class="form-group">
+                        <h3 class="form-control-label text-muted">Password</h3>
+                        <input ngModel type="password" required id="Password" name="Password" placeholder="Password" class="form-control" #Password="ngModel" #spy>
+                      </div>
+                      <div class="row justify-content-center my-3 px-3"> <button type="submit" class="btn-block btn-color">Login to Calsoft</button> </div>
+
+                      <div class="row justify-content-center my-2"> <a href="#"><small class="text-muted">Forgot Password?</small></a> </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</form>
+<div class="bottom text-center mb-5">
+  <p href="#" class="sm-text mx-auto mb-3">Don't have an account?<button type ="submit" (click)="Registration()" class="btn btn-white ml-2">Create new</button></p>
+</div>
+</body>
+
+

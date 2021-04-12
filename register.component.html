@@ -1,0 +1,77 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<div class="card bg-light">
+  <article class="card-body mx-auto" style="max-width: 400px;">
+    <h4 class="card-title mt-3 text-center">Create Account</h4>
+
+    <form #registerForm="ngForm" (ngSubmit)="Register(registerForm)" class="container" role="form">
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+        </div>
+        <input ngModel  type="text" class="form-control" required name="Name" id="Name" placeholder="Full name" #Name="ngModel" #spy>
+      </div> <!-- form-group// -->
+
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+        </div>
+        <input name="Username" id="Username" required class="form-control" placeholder="Email address" type="email" [(ngModel)]="Username">
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+        </div>
+        <select class="custom-select" required style="max-width: 120px;" id="Extension" name = "Extension" [(ngModel)]="Extension">
+          <option selected="">+91</option>
+          <option value="1">+92</option>
+          <option value="2">+98</option>
+          <option value="3">+71</option>
+        </select>
+        <input name="phoneno" id="phoneno" type="number" required class="form-control" placeholder="Phone Number"
+        name = "Phoneno" [(ngModel)]="Phoneno" minlength="10" maxlength="10">
+      </div> <!-- form-group// -->
+
+<!-- <div>
+  <div class="input-group-prepend">
+    <span class="input-group-text"> <i class="fa fa-building"></i> </span> <br>
+  <label> Gender: </label> <br>
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other <br>
+  </div>
+</div> -->
+
+  <div class="input-group-prepend">
+    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+      <select class="form-control" required name="Designation" [(ngModel)]="Designation">
+        <option selected=""> Select job type</option>
+        <option>Designer</option>
+        <option>Manager</option>
+        <option>Accaunting</option>
+      </select>
+</div> <!-- form-group end.// --><br>
+<div class="form-group input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+  </div>
+  <input class="form-control" name="Password" required placeholder="Create password" type="password"  [(ngModel)]="Password">
+</div> <!-- form-group// -->
+<div class="form-group input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+  </div>
+  <input class="form-control" required placeholder="Repeat password" type="password" name="ConfirmPassword" [(ngModel)]="ConfirmPassword">
+</div> <!-- form-group// -->
+
+<div class="form-group">
+  <button type="submit" class="btn btn-primary btn-block"> Create Account </button>
+</div> <!-- form-group// -->
+</form>
+</article>
+</div> <!-- card.// -->

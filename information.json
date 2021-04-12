@@ -1,0 +1,18 @@
+
+     [ {
+        "Name":"Kajal Shinde",
+        "username":"kajal.shinde@gmail.com",
+        "password":"1234",
+        "phoneNo":"9876543210",
+        "designation":"Designer"
+      },
+      {
+        "Name":"Priyanka Shinde",
+        "username":"priya.shinde@gmail.com",
+        "password":"4567",
+        "phoneNo":"7876643210",
+        "designation":"Manager"
+      }
+    ]
+
+
